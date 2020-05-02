@@ -1,0 +1,6 @@
+alias g='git'
+alias gco='git checkout'
+alias gst='git status'
+alias ggpull='git pull'
+alias ggpush='git push'
+alias glog='git log -s'
