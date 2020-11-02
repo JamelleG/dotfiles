@@ -56,6 +56,7 @@ let g:ranger_replace_netrw = 1
 
 " Coc settings
 let g:coc_global_extensions = [
+  \ 'coc-rust-analyzer',
   \ 'coc-tsserver',
   \ 'coc-prettier',
   \ 'coc-eslint'
