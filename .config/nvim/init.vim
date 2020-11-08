@@ -11,14 +11,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 
-
-" TS/JS/React
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'jparise/vim-graphql'
-
+" Syntax
+Plug 'sheerun/vim-polyglot'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -47,6 +41,14 @@ set number
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
+
+
+" Formatting
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+filetype plugin indent on
+
 
 " Filetypes (todo split out)
 autocmd FileType yaml set tabstop=2 shiftwidth=2
