@@ -1,19 +1,20 @@
-alias dcu="docker-compose up -d"
-alias dclogs="docker-compose logs"
+abbr -ag dcu "docker-compose up -d"
+abbr -ag dclogs "docker-compose logs"
+abbr -ag dcb "docker-compose build"
+abbr -ag dcd "docker-compose down"
+abbr -ag dcres "docker-compose restart"
+abbr -ag dcl "docker-compose logs"
+abbr -ag dclf "docker-compose logs -f"
+abbr -ag dcps "docker-compose ps"
+abbr -ag dstop "docker stop (docker ps --format '{{.Names}}' | rg -i --invert-match 'jamdev')"
+abbr -ag dstopa "docker stop (docker ps -q)"
+
+
 #todo: add function back
 #alias dcrun=dcrun-fn
-alias dcb="docker-compose build"
-alias dcd="docker-compose down"
-alias dcres="docker-compose restart"
-alias dcl="docker-compose logs"
-alias dclf="docker-compose logs -f"
-alias dcps="docker-compose ps"
-#todo: add function back
 #alias drun=drun-fn
 #alias dex=dex-fn
 #alias dcex=dcex-fn
-alias dstop="docker stop (docker ps --format='{{.Names}}' | rg -i --invert-match 'jamdev')"
-alias dstopa="docker stop (docker ps -q)"
 
 
 

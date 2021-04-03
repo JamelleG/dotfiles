@@ -5,9 +5,9 @@ function current_branch
 end
 
 
-alias g='git'
-alias gco='git checkout'
-alias gst='git status'
-alias ggpull='git pull origin (current_branch)'
-alias ggpush="git push origin (current_branch)"
-alias glog='git log -s'
+abbr -ag g 'git'
+abbr -ag gco 'git checkout'
+abbr -ag gst 'git status'
+abbr -ag ggpull 'git pull origin (current_branch)'
+abbr -ag ggpush "git push origin (current_branch)"
+abbr -ag glog 'git log -s'

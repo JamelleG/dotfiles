@@ -1,12 +1,11 @@
 alias rfish="source ~/.config/fish/config.fish"
-alias wf="workflow"
-alias wfup="wf2 up"
-alias wfcf="wf2 m cache:flush"
-alias wfcc="wf2 m cache:clean"
-alias wfsu="wf2 m setup:upgrade"
-alias wfdel="wf2 delete"
-alias vim=nvim
-alias vi=nvim
-alias tx=tmuxinator
+abbr -ag wfup "wf2 up"
+abbr -ag wfcf "wf2 m cache:flush"
+abbr -ag wfcc "wf2 m cache:clean"
+abbr -ag wfsu "wf2 m setup:upgrade"
+abbr -ag wfdel "wf2 delete"
+abbr -ag vim nvim
+abbr -ag vi nvim
+abbr -ag tx tmuxinator
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
