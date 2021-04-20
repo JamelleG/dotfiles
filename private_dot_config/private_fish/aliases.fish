@@ -1,4 +1,4 @@
-alias rfish="source ~/.config/fish/config.fish"
+alias rfish="source ~/.config/fish/config.fish && echo 'fish reloaded'"
 abbr -ag wfup "wf2 up"
 abbr -ag wfcf "wf2 m cache:flush"
 abbr -ag wfcc "wf2 m cache:clean"
