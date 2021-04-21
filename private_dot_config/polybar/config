@@ -36,7 +36,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = powermenu bspwm 
 modules-center = mpd
-modules-right = pulseaudio date 
+modules-right = temperature pulseaudio date 
 
 tray-position = right
 tray-padding = 2
@@ -103,4 +103,9 @@ interval = 1.0
 date = %a %d %b
 time = %H:%M
 
+;todo make system indepedant
+[module/temperature]
+type = internal/temperature
+interval = 2
+hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon1/temp2_input 
 ; vim:ft=dosini
