@@ -1,5 +1,6 @@
 alias rfish="source ~/.config/fish/config.fish && echo 'fish reloaded'"
 abbr -ag wfup "wf2 up"
+abbr -ag tidyxml "tidy -xml -iq"
 abbr -ag wfcf "wf2 m cache:flush"
 abbr -ag wfcc "wf2 m cache:clean"
 abbr -ag wfsu "wf2 m setup:upgrade"
