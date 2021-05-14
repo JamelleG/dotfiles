@@ -8,6 +8,7 @@ set -Ux EDITOR nvim
 set -Ux VISUAL nvim 
 
 fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/.magento-cloud/bin
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 
 starship init fish | source
