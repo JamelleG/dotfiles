@@ -2,6 +2,7 @@ source $HOME/.config/fish/aliases.fish
 source $HOME/.config/fish/git.fish
 source $HOME/.config/fish/docker.fish
 source $HOME/.config/fish/podman.fish
+source $HOME/.config/fish/utils.fish
 
 set -gx SXHKD_SHELL '/usr/bin/sh'
 set -Ux EDITOR nvim 
