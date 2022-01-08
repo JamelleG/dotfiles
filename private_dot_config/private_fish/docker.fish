@@ -1,6 +1,7 @@
 abbr -ag dcu "docker-compose up -d"
 abbr -ag dcb "docker-compose build"
 abbr -ag dcd "docker-compose down"
+abbr -ag dcs "docker-compose stop"
 abbr -ag dcr "docker-compose restart"
 abbr -ag dcl "docker-compose logs"
 abbr -ag dclf "docker-compose logs -f"

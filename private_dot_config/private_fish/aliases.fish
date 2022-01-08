@@ -7,6 +7,8 @@ abbr -ag wfsu "wf2 m setup:upgrade"
 abbr -ag wfdel "wf2 delete"
 abbr -ag tm tmux
 abbr -ag tmj "tmux a -t"
+abbr -ag tmnj "tmux new -s"
+abbr -ag tmn "tmux new -d -s"
 abbr -ag tx tmuxinator
 abbr -ag cz chezmoi
 alias vim=nvim
