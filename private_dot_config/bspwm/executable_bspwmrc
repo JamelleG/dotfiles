@@ -2,7 +2,6 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x picom > /dev/null || picom &
-pgrep -x mopidy > /dev/null || mopidy &
 
 $HOME/.config/polybar/launch.sh
 
