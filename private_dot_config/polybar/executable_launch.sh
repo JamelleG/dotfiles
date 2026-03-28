@@ -1,7 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-killall -q polybar
-while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-polybar topbar &
+# =======================================================================
+# Polybar Launch Script
+# =======================================================================
 
-echo "Polybar launched..."
+polybar-msg cmd quit
+
+mkdir -p /tmp/polybar
+
+polybar topbar 2>&1 | tee /tmp/polybar/topbar.log & disown
+
+echo "Polybar launched successfully! Logs saved to /tmp/polybar/topbar.log"
