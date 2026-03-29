@@ -1,4 +1,5 @@
 #!/usr/bin/sh
+export PATH="$HOME/.local/bin:$PATH"
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x picom > /dev/null || picom &
@@ -18,5 +19,4 @@ bspc config gapless_monocle      true
 wmname LG3D
 
 bspc rule -a Gnome-calculator state=floating
-
-
+bspc rule -a Flameshot state=floating sticky=on border=off

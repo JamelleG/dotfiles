@@ -11,11 +11,11 @@ super + Return
   rofi -show drun
 
 super + Escape
-	pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd; notify-send "Sxhkd" "Configuration reloaded!"
 
 # quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r}
+	bspc {quit,wm -r; notify-send "Bspwm" "Window Restarted!"}
 
 # close and kill
 super + {_,shift + }w
@@ -120,3 +120,23 @@ XF86Audio{Raise,Lower}Volume
 XF86AudioMute
 	amixer -q sset Master toggle
 
+
+# -- Screenshot Hotkeys --
+
+# Fullscreen to clipboard
+Print
+    my-screenshot full-copy
+
+# Select area to clipboard (Instant - no UI buttons)
+# TODO: review issue with losing window after capturing. 
+alt + Print
+    my-screenshot gui-copy
+
+# Fullscreen to file (with thumbnail notification)
+shift + Print
+    my-screenshot full-save
+
+# Select area to file (with thumbnail notification)
+# TODO: review issue with losing window after capturing. 
+super + Print
+    my-screenshot gui-save

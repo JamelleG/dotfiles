@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# my-screenshot: My custom screenshot script 
+# Requirements: flameshot, libnotify (notify-send)
+
+SAVE_DIR="$HOME/Pictures/Screenshots"
+mkdir -p "$SAVE_DIR"
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+FILE_PATH="$SAVE_DIR/shot_$TIMESTAMP.png"
+
+notify_me() {
+    # $1 = Title, $2 = Message, $3 = Icon/Thumbnail Path
+    notify-send -a "My-Shot" -i "$3" "$1" "$2"
+}
+
+case "$1" in
+    "full-copy")
+        flameshot screen -c && \
+        notify_me "Captured!" "Full screen is in your clipboard." "camera-photo"
+        ;;
+    "gui-copy")
+        flameshot gui -c --accept-on-select && \
+        notify_me "Captured!" "Selection is in your clipboard." "camera-photo"
+        ;;
+    "full-save")
+        flameshot full -p "$FILE_PATH" && \
+        notify_me "Saved!" "$FILE_PATH" "$FILE_PATH"
+        ;;
+    "gui-save")
+        # Capture raw data to file
+        flameshot gui -r > "$FILE_PATH"
+        # Only notify if the file isn't empty (handles 'Esc' key)
+        if [ -s "$FILE_PATH" ]; then
+            notify_me "Saved!" "$FILE_PATH" "$FILE_PATH"
+        else
+            rm -f "$FILE_PATH"
+        fi
+        ;;
+    *)
+        echo "Usage: my-screenshot {full-copy|gui-copy|full-save|gui-save}"
+        exit 1
+        ;;
+esac
